@@ -13,4 +13,9 @@ function solution(str, ending) {
 
 console.log(solution("abc", "bc"));
 
-function solution(str, ending) {}
+
+function solution2(str, ending) {
+  return str.slice(-ending.length) === ending;
+}
+
+console.log(solution2("abc", "bc"));
