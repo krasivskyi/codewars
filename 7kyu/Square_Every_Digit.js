@@ -11,6 +11,13 @@ Note: The function accepts an integer and returns an integer.
 Happy Coding! */
 
 function squareDigits(num) {
-  return parseInt(num.toString().split('').map(x => x * x).join(''), 10);
+  return parseInt(
+    num
+      .toString()
+      .split("")
+      .map((x) => x * x)
+      .join(""),
+    10
+  );
 }
 console.log(squareDigits(3212));
