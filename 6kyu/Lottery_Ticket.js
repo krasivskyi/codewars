@@ -14,9 +14,11 @@ Once you have counted all of your mini wins, compare that number to the other in
 All inputs will be in the correct format. Strings on tickets are not always the same length. */
 
 function bingo(ticket, win) {
-    let count = 0
-    for (let i = 0; i < ticket.length; i++) {
-        if (ticket[i][0].charCodeAt(0) == ticket[i][1]) count++
+  let miniWins = 0;
+  for (const [str, num] of ticket) {
+    if (str.split("").some((char) => char.charCodeAt(0) === num)) {
+      miniWins++;
     }
-    return count >= win ? 'Winner!' : 'Loser!'
+  }
+  return miniWins >= win ? "Winner!" : "Loser!";
 }
