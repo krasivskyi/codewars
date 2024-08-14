@@ -7,10 +7,9 @@ Examples:
 [[1],[2]] => true
 ['1','2'] => false
 [{1:1},{2:2}] => false */
-const arrCheck = value => Array.isArray(value);
-
+const arrCheck = (value) => Array.isArray(value);
 
 //other solution
-    function arrCheck2(arr) {
-  return arr.every(element => Array.isArray(element));
+function arrCheck2(arr) {
+  return arr.every((element) => Array.isArray(element));
 }
